@@ -38,6 +38,7 @@ class Game(simpleGE.Scene):
     def __init__(self):
         super().__init__()
         self.setImage("FallScene.png")
+        self.sndLeaf = simpleGE.Sound("leafCatch.wav")
         self.wednesday = Wednesday(self)
         self.leaf = Leaf(self)
         self.sprites = [self.wednesday,
@@ -45,6 +46,7 @@ class Game(simpleGE.Scene):
     
     def process(self):
         if self.wednesday.collidesWith(self.leaf):
+            self.sndLeaf.play()
             self.leaf.reset()
 
 def main():
