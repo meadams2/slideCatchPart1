@@ -27,13 +27,13 @@ class Leaf(simpleGE.Sprite):
     
     def reset(self):
         self.x = random.randint(0, self.screenWidth)
-        self.y = 100
+        self.y = 0
         self.dy = random.randint(self.minSpeed, self.maxSpeed)
     
     def checkBounds(self):
         if self.bottom > self.screenHeight:
             self.reset()
-        
+    
 class Game(simpleGE.Scene):
     def __init__(self):
         super().__init__()
@@ -42,6 +42,10 @@ class Game(simpleGE.Scene):
         self.leaf = Leaf(self)
         self.sprites = [self.wednesday,
                         self.leaf]
+    
+    def process(self):
+        if self.wednesday.collidesWith(self.leaf):
+            self.leaf.reset()
 
 def main():
     game = Game()
