@@ -43,6 +43,9 @@ Define a new method within Game class called process. Process takes self. Using 
 
 # Milestone 5: Modify for Multiple Leaves
 
+In game class, define new attribute self.leaves. Self.leaves is a list. Begin a for loop with a range of 10. For each iteration, append Leaf(self) to self.leaves. Update self.sprites to include self.leaves. 
+
+Update process method in Game class. Add a for loop (for leaf in self.leaves). If Wednesday collides with a leaf, play a sound and reset. 
 
 
 
