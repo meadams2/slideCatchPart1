@@ -47,7 +47,9 @@ In game class, define new attribute self.leaves. Self.leaves is a list. Begin a 
 
 Update process method in Game class. Add a for loop (for leaf in self.leaves). If Wednesday collides with a leaf, play a sound and reset. 
 
+# Blackbelt Extension
 
+Check for if up or down arrows are pressed in Wednesday class. If up arrow is pressed go up 3 pixels. If down arrow is pressed, go down 3 pixels. Logic is tricky with y direction. Recall (0, 0) is top left corner of window. To go up, go in -y direction. To go down, go in y direction. checkBounds is still in effect within Wednesday class. 
 
 
 
